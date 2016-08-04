@@ -4,12 +4,29 @@
 	<cms:var name="_DOCTYPE"/>
 	<html lang="$language" dir="$language_rtl ? 'rtl' : 'ltr'" cms:eval="lang,dir">
 		<head>
-			<title><cms:text constant="site_title"/></title>
+			<title><cms:text constant="site_title"/></title>	
 			<cms:module name="head_tag" action="print_tag"/>
 		</head>
-
 		<body>
-			<h1>It works!</h1>
+			<header>
+				<div class="logo">
+				<cms:svg file="site-sprite.svg" symbol="logo"/>
+				</div>
+				<h1><cms:text constant="header_title" /></h1>
+				<p><cms:text constant="header_p" /></p>
+				<img 
+					src="_BASEURL.'/site/images/album-mockup.png'"
+					alt="ibi"
+					cms:eval="src"
+				/>
+				<a href="#"><cms:text constant="order"/></a>
+				<cms:module 
+					name="articles"
+					action="show"
+					text_id="header_article"
+					template="parts/article.xml"
+				/>
+			</header>
 		</body>
 	</html>
 </document>

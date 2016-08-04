@@ -1,0 +1,98 @@
+/**
+ * Content Style Sheet
+ * Sharona-Elimeleh
+ *
+ * Copyright (c) 2016. by Way2CU, http://way2cu.com
+ * Authors:Iliya Melishev
+ */
+ 
+ section#gallery {
+ 	padding: 0.5 0;
+ 	background-color: @color_black;
+ 	text-align: center;
+ }
+
+section#media ul,
+section#gallery ul {
+	list-style: none;
+	padding: 0;
+	display: block;
+	margin: 0;
+}
+
+section#gallery ul li {
+	display: inline-block;
+	vertical-align: top;
+	padding: 0.5em;
+	overflow:hidden;
+	box-sizing: border-box;
+	width: 20%;
+}
+
+section#gallery ul li a {
+	display: block;
+	overflow: hidden;
+}
+
+section#gallery ul li img {
+	display: block;
+	width: 100%;
+	height: auto;
+	opacity: 0.8;
+	transition:all 0.3s;
+	transform:scale(1);
+
+}
+
+section#gallery ul li img:hover {
+	opacity: 1;
+	transform:scale(1.2);
+}
+
+section#media {
+	padding: 2em calc(~'(100% - 1200px )' / 2 );
+	text-align: center;
+	background-color: @color_black;
+}
+
+section#media svg {
+	width: 50px;
+	height: 50px;
+	display: block;
+	margin: 0 auto;
+	padding-bottom: 0;
+}
+
+section#media h3 {
+	color: white;
+	font-weight: 300;
+	margin: 0;
+	font-size: 3em;
+}
+
+section#media li {
+	display: inline-block;
+	vertical-align: top;
+	padding: 1em;
+}
+
+section#media h4 {
+	margin: 0;
+	color: white;
+	font-weight: 300;
+	padding: 0.3em;
+}
+
+section#media p {
+	color: white;
+	background-image: url(../images/youtube.svg);
+	background-size: 140px 60px;
+	background-position: center top;
+	background-repeat: no-repeat;
+	font-size: 2em;
+	padding-top: 60px;
+}
+
+section#media a {
+	font-size: 1.3em;
+}

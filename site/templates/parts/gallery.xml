@@ -1,0 +1,16 @@
+<document>
+	<li>
+		<a 
+			class="lightbox"
+			href="$params['image']" 
+			cms:eval="href"
+			>
+
+			<img 
+			src="gallery::getThumbnailById($params['id'], null, 350, Thumbnail::CONSTRAIN_BOTH)" 
+			alt="$params['title'][$language]"
+			cms:eval="src,alt"
+			/>
+		</a>
+	</li>
+</document>

@@ -20,13 +20,76 @@
 					cms:eval="src"
 				/>
 				<a href="#"><cms:text constant="order"/></a>
-				<cms:module 
-					name="articles"
-					action="show"
-					text_id="header_article"
-					template="parts/article.xml"
-				/>
+				<article>
+					<cms:module 
+						name="articles"
+						action="show"
+						text_id="header_article"
+						template="parts/article.xml"
+					/>
+				</article>
 			</header>
+			<section id="gallery">
+				<ul>
+					<cms:module 
+						name="gallery"
+						action="show_image_list"
+						group="gallery"
+						template="parts/gallery.xml"
+					/>
+				</ul>
+			</section>
+			<section id="media">
+				<cms:svg file="site-sprite.svg" symbol="clips"/>
+
+				<h3><cms:text constant="clips"/></h3>
+
+				<ul>
+					<cms:module 
+						name="youtube"
+						action="show_list"
+						group_text_id="clips"
+						template="parts/youtube.xml"
+					/>
+				</ul>
+
+				<cms:svg file="site-sprite.svg" symbol="tv"/>
+
+				<h3><cms:text constant="tv"/></h3>
+
+				<cms:module 
+					name="youtube"
+					action="show_list"
+					group_text_id="tv"
+					template="parts/youtube.xml"
+					>
+
+				<param name="big" value=""/>		
+				</cms:module>
+
+				<cms:svg file="site-sprite.svg" symbol="movie"/>
+				<h3><cms:text constant="movie"/></h3>
+				<cms:module 
+					name="youtube"
+					action="show_list"
+					group_text_id="tv"
+					template="parts/youtube.xml"
+					>
+				<param name="big" value=""/>		
+				</cms:module>
+				<cms:svg file="site-sprite.svg" symbol="theater"/>
+				<h3><cms:text constant="theater"/></h3>
+				<cms:module 
+					name="youtube"
+					action="show_list"
+					group_text_id="tv"
+					template="parts/youtube.xml"
+					>
+				<param name="big" value=""/>		
+				</cms:module>
+				<p><cms:text constant="youtube" /></p>
+				<a href="#" class="button-style"><cms:text constant="sharona"/></a>
+			</section>
 		</body>
 	</html>
 </document>

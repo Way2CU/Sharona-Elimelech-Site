@@ -1,0 +1,10 @@
+<document>
+	<article>
+		<cms:markdown param="content" multilanguage="yes"/>
+		<img 
+			src="gallery::getGroupThumbnailById($params['gallery'], null, 500, Thumbnail::CONSTRAIN_BOTH)" 
+			alt="$params['title'][$language]"
+			cms:eval="src,alt"
+			/>
+	</article>
+</document>

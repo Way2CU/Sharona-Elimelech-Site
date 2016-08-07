@@ -90,6 +90,28 @@
 				<p><cms:text constant="youtube" /></p>
 				<a href="#" class="button-style"><cms:text constant="sharona"/></a>
 			</section>
+			<section id="biography">
+				<cms:module 
+					name="articles"
+					action="show_group"
+					text_id="biography"
+					template="parts/article.xml"
+				/>
+				<cms:module 
+					name="articles"
+					action="show_list"
+					group="biography"
+					template="parts/biography.xml"
+				/>
+				<ul>
+					<cms:module 
+						name="gallery"
+						action="show_image_list"
+						group="albums"
+						template="parts/gallery.xml"
+					/>
+				</ul>
+			</section>
 		</body>
 	</html>
 </document>

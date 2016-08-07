@@ -29,11 +29,13 @@ section#gallery ul li {
 	width: 20%;
 }
 
+section#biography > ul li a,
 section#gallery ul li a {
 	display: block;
 	overflow: hidden;
 }
 
+section#biography > ul li img,
 section#gallery ul li img {
 	display: block;
 	width: 100%;
@@ -41,9 +43,9 @@ section#gallery ul li img {
 	opacity: 0.8;
 	transition:all 0.3s;
 	transform:scale(1);
-
 }
 
+section#biography > ul li img:hover,
 section#gallery ul li img:hover {
 	opacity: 1;
 	transform:scale(1.2);
@@ -138,7 +140,10 @@ section#biography > ul {
 section#biography > ul li {
 	display: inline-block;
 	vertical-align: middle;
+	transition:all 0.3s;
+	transform:scale(1);
 }
+
 
 section#biography > ul li img {
 	display: block;

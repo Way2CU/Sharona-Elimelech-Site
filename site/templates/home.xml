@@ -112,6 +112,34 @@
 					/>
 				</ul>
 			</section>
+			<footer>
+				<div id="footer_title">
+					<cms:svg file="site-sprite.svg" symbol="logo"/>
+					<h2><cms:text constant="sharona_footer" /></h2>
+				</div>
+				<div id="links">
+					<h3><cms:text constant="link_title"/></h3>
+					<cms:module 
+						name="links"
+						action="show_link_list"
+						group="contact_links"
+						template="parts/links.xml"
+					/>
+				</div>
+				<div id="container">
+					<h4><cms:text constant="title_form"/></h4>
+					<cms:module 
+						name="contact_form"
+						action="show"
+						text_id="contact_form"
+					/>
+				</div>
+				<cms:template file="stock/copyright.xml">
+					<param name="holder" value="copyright_holder"/>
+					<param name="text" value="copyright_text"/>
+					<param name="light" value=""/>
+				</cms:template>
+			</footer>
 		</body>
 	</html>
 </document>

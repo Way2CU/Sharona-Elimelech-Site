@@ -1,10 +1,23 @@
 <document>
-	<article>
-		<cms:markdown param="content" multilanguage="yes"/>
-		<img 
-			src="gallery::getGroupThumbnailById($params['gallery'], null, 500, Thumbnail::CONSTRAIN_BOTH)" 
-			alt="$params['title'][$language]"
-			cms:eval="src,alt"
-			/>
-	</article>
+	<cms:desktop>
+		<article>
+			<cms:markdown param="content" multilanguage="yes"/>
+			<img 
+				src="gallery::getGroupThumbnailById($params['gallery'], null, 500, Thumbnail::CONSTRAIN_BOTH)" 
+				alt="$params['title'][$language]"
+				cms:eval="src,alt"
+				/>
+		</article>
+	</cms:desktop>
+
+	<cms:mobile>
+		<article>
+			<cms:markdown param="content" multilanguage="yes"/>
+			<img 
+				src="gallery::getGroupThumbnailById($params['gallery'], null, 250, Thumbnail::CONSTRAIN_BOTH)" 
+				alt="$params['title'][$language]"
+				cms:eval="src,alt"
+				/>
+		</article>
+	</cms:mobile>
 </document>

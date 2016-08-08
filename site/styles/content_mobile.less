@@ -1,0 +1,194 @@
+/**
+ * Content_Mobile Style Sheet
+ * Sharona-Elimeleh
+ *
+ * Copyright (c) 2016. by Way2CU, http://way2cu.com
+ * Authors:Iliya Melishev
+ */
+ 
+section#album {
+	display: block;
+	background-image: url(../images/mobile-album-background.jpg);
+	background-repeat: no-repeat;
+	background-size: 100% auto;
+	background-position: center top;
+	text-align: center;
+	color: white;
+	padding: 0 1em;
+	background-color:#231f20;
+}
+
+section#album img {
+	width: 95%;
+	height: auto;
+	margin: 0 auto;
+	display: block;
+	padding: 2em 1em;
+}
+
+section#album article p {
+	margin: 0;
+	padding-bottom: 2em;
+}
+
+section a.button-style {
+	text-align: center;
+	font-size: 1em;	
+}
+
+section#media {
+	text-align: center;
+	background-color: #231f20;
+	color: white;
+	padding: 2em 0;
+}
+
+section#media svg {
+	width: 35px;
+	height: 35px;
+	display: block;
+	margin: 0 auto;
+	padding: 1em;
+}
+
+section#media h3 {
+	color: white;
+	font-weight: 300;
+	margin: 0;
+	font-size: 1.8em;
+	padding:0.5em;
+}
+
+section#media div.clips_container {
+	display: block;
+	position: relative;
+	height: 250px;
+}
+
+section#media div.clips_container a.prev,
+section#media div.clips_container a.next {
+	fill:white;
+	position: absolute;
+	top: 50%;
+	margin-top: -15px;
+	right: 0.2em;
+}
+
+section#media div.clips_container a.prev {
+	left: 0.2em;
+	right: auto;
+	top: 50%;
+	transform:scale(-1);
+}
+
+section#media div.clips_container a.prev svg,
+section#media div.clips_container a.next svg {
+	fill:white;
+	padding: 0;
+	width: 30px;
+	height: 30px;
+}
+
+section#media  div.clips_container ul {
+	list-style: none;
+	display: block;
+	margin: 0;
+	padding:0;
+	margin: 0 auto;
+}
+
+section#media  div.clips_container ul a {
+	position: absolute;
+	top: 50%;
+	transform:translate(-50%,-50%);
+	left: 50%;
+}
+
+section#media  div.clips_container ul a img {
+	width: 250px;
+	height: 187.5px;
+	display: block;
+}
+
+section#media h4 {
+	margin: 0;
+	color: white;
+	font-weight: 300;
+	padding: 0.3em;
+}
+
+section#media p {
+	color: white;
+	background-image: url(../images/youtube.svg);
+	background-size: 100px 60px;
+	background-position: center top;
+	background-repeat: no-repeat;
+	font-size: 1em;
+	padding-top: 60px;
+	text-align: center;
+}
+section#media div.clips_container a.youtube {
+	transition: all 0.3s;
+	opacity: 0;
+	visibility: hidden;
+}
+
+section#media div.clips_container a.youtube.visible {
+	opacity: 1;
+	visibility: visible;
+}
+
+section#media a.youtube > img {
+	width: 250px;
+	height: 187.5px;
+}
+
+/*Biography section*/
+
+section#biography {
+	padding: 0 1em;
+}
+section#biography h2 {
+	font-weight: 300;
+	font-size: 2em;
+	text-align: center;
+}
+
+section#biography article {
+	padding-bottom: 2em;
+}
+
+section#biography article:last-of-type {
+	padding-bottom: 0;
+}
+
+section#biography p {
+	display: block;
+}
+
+section#biography article > img {
+	display:block;
+	margin: 0 auto;
+}
+
+section#biography > ul {
+	list-style: none;
+	display: block;
+	padding: 2em 0;
+	text-align: center;
+	margin: 0;
+}
+
+section#biography > ul li {
+	display: inline-block;
+	vertical-align: middle;
+	padding: 0.5em;
+}
+
+
+section#biography > ul li img {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+

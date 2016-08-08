@@ -1,16 +1,27 @@
 <document>
-	<li>
-		<a 
-			class="lightbox"
-			href="$params['image']" 
-			cms:eval="href"
-			>
+	<cms:desktop>
+		<li>
+			<a 
+				class="lightbox"
+				href="$params['image']" 
+				cms:eval="href"
+				>
 
-			<img 
-			src="gallery::getThumbnailById($params['id'], null, 300, Thumbnail::CONSTRAIN_BOTH)" 
-			alt="$params['title'][$language]"
-			cms:eval="src,alt"
-			/>
-		</a>
-	</li>
+				<img 
+				src="gallery::getThumbnailById($params['id'], null, 300, Thumbnail::CONSTRAIN_BOTH)" 
+				alt="$params['title'][$language]"
+				cms:eval="src,alt"
+				/>
+			</a>
+		</li>
+	</cms:desktop>
+	<cms:mobile>
+		<li>
+		<img 
+				src="gallery::getThumbnailById($params['id'], null, 120, Thumbnail::CONSTRAIN_BOTH)" 
+				alt="$params['title'][$language]"
+				cms:eval="src,alt"
+				/>
+		</li>
+	</cms:mobile>
 </document>

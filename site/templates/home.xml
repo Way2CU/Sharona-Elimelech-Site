@@ -13,8 +13,10 @@
 				<div class="logo">
 				<cms:svg file="site-sprite.svg" symbol="logo"/>
 				</div>
-				<h1><cms:text constant="header_title" /></h1>
-				<p><cms:text constant="header_p" /></p>
+				<div class="text_container">
+					<h1><cms:text constant="header_title" /></h1>
+					<p><cms:text constant="header_p" /></p>
+				</div>
 				<cms:desktop>
 					<div id="album">
 						<img 
@@ -169,19 +171,36 @@
 						template="parts/links.xml"
 					/>
 				</div>
-				<div id="container">
-					<h4><cms:text constant="title_form"/></h4>
-					<cms:module 
-						name="contact_form"
-						action="show"
-						text_id="contact_form"
-					/>
-				</div>
-				<cms:template file="stock/copyright.xml">
-					<param name="holder" value="copyright_holder"/>
-					<param name="text" value="copyright_text"/>
-					<param name="light" value=""/>
-				</cms:template>
+				<cms:desktop>
+					<div id="container">
+						<h4><cms:text constant="title_form"/></h4>
+						<cms:module 
+							name="contact_form"
+							action="show"
+							text_id="contact_form"
+						/>
+					</div>
+					<cms:template file="stock/copyright.xml">
+						<param name="holder" value="copyright_holder"/>
+						<param name="text" value="copyright_text"/>
+						<param name="light" value=""/>
+					</cms:template>
+				</cms:desktop>
+				<cms:mobile>
+					<div id="container">
+						<h4><cms:text constant="title_form"/></h4>
+						<cms:module 
+							name="contact_form"
+							action="show"
+							text_id="contact_form"
+						/>
+					<cms:template file="stock/copyright.xml">
+						<param name="holder" value="copyright_holder"/>
+						<param name="text" value="copyright_text"/>
+						<param name="light" value=""/>
+					</cms:template>
+					</div>
+				</cms:mobile>
 			</footer>
 		</body>
 	</html>

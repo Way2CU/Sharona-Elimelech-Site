@@ -49,9 +49,18 @@ Site.is_mobile = function() {
  * Function called when document and images have been completely loaded.
  */
 Site.on_load = function() {
-	if (Site.is_mobile())
+	if (Site.is_mobile()) {
 		Site.mobile_menu = new Caracal.MobileMenu();
+		Site.slider = new PageControl('div.clips_container','a.youtube');
+		Site.slider
+			.attachNextControl($('a.next'))
+			.attachPreviousControl($('a.prev'))
+			.setWrapAround(true);
+	}
+
 	Site.lightbox = new LightBox('a.lightbox',  false,  false,  true);
+
+
 };
 
 

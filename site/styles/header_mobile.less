@@ -13,6 +13,7 @@ header {
  	background-size: 100% auto;
  	position: relative;
  	color: white;
+      min-height: calc(~'(100vw * 0.78)');
 }
 
 header div.logo {
@@ -27,13 +28,20 @@ header div.logo svg {
   	margin: 0 auto;
 }
 
-header h1 {
+div.text_container {
+    position: absolute;
+    top: 70%;
+    right: 0;
+}
+
+header div.text_container h1 {
 	margin: 0;
 	padding-top: 0.5em;
 	padding-right: 0.2em;
+      font-size: 1.7em;
 }
 
-header p {
+header div.text_container p {
 	margin: 0;
 	padding-right: 0.5em;
 }

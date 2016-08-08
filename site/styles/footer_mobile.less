@@ -5,3 +5,188 @@
  * Copyright (c) 2016. by Way2CU, http://way2cu.com
  * Authors:Iliya Melishev
  */
+
+footer {
+ 	background-image: url(../images/mobile-footer-background.jpg);
+ 	background-position: center top;
+ 	background-size: 100% auto;
+ 	background-repeat: no-repeat;
+ 	text-align: center;
+ 	padding: 0 1em;
+ 	position: relative;
+ 	height: 750px;
+}
+
+footer div#footer_title {
+ 	display: block;
+ 	padding: 1em;
+}
+
+footer div#footer_title svg {
+ 	display: inline-block;
+ 	vertical-align: middle;
+ 	width: 40px;
+ 	height: 40px;
+ 	fill:white;
+ 	padding: 0.5em;
+ 	padding-top: 35px;
+}
+
+footer div#footer_title h2 {
+ 	display: inline-block;
+ 	vertical-align: middle;
+ 	font-size: 2em;
+ 	color: white;
+ 	margin: 0;
+ 	padding-top: 20px;
+}
+
+footer div#links {
+	display: block;
+	background-color: fade(black, 50%);
+	margin: 0 auto;
+	color: white;
+	padding: 0.5em;
+}
+
+footer div#links h3 {
+	margin: 0;
+	padding: 0.5em;
+	padding-top: 0;
+}
+
+footer div#links a {
+	text-decoration: none;
+	color: white;
+}
+
+footer div#links a.mail,
+footer div#links a.show {
+	display: block;
+	font-weight: 700;
+
+}
+
+footer div#links a.phone {
+	display: inline-block;
+	vertical-align: middle;
+	padding: 5px;
+}
+
+footer div#links a.phone:first-of-type {
+	padding-left: 0.5em;
+}
+
+
+footer div#container {
+	background-color: #022510;
+	color: white;
+	display: block;
+	position: absolute;
+	top: 100%;
+	left: 0;
+	right:0;
+	text-align: center;
+	padding: 1em;
+}
+
+footer div#container h4 {
+	font-size: 1.5em;
+}
+
+footer div#container form label {
+	display: block;
+	position: relative;
+	margin: 0 auto;
+}
+
+footer div#container form label input {
+	display: block;
+	box-sizing: border-box;
+	padding: 10px 50px;
+	padding-right: 40px;
+	width: 100%;
+}
+
+footer div#container form label textarea {
+	resize: vertical;
+	width: 100%;
+	height: 150px;
+	margin-top: 1em;
+	box-sizing: border-box;
+}
+
+footer div#container form label span {
+	font-size: 0;
+}
+
+footer div#container form label:before {
+	content: "";
+	position: absolute;
+	top: 50%;
+	right: 0;
+	width: 60px;
+	height: 60px;
+	transform: translatey(-50%);
+	background-image: url(../images/form-sprite.svg);
+	background-position:  -110px 67px;
+	background-size: 180px 60px;
+}
+
+footer div#container form label:nth-of-type(2):before {
+	background-position: -170px 67px;
+}
+
+footer div#container form label:nth-of-type(3):before {
+	 background-position: -230px 67px;
+}
+
+footer div#container form label:nth-of-type(4) {
+	display: block;
+	margin: 0 auto;
+	width: 100%;
+}
+
+footer div#container form label:nth-of-type(4):before {
+	display: none;
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: black;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: black;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: black;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: black;
+}
+
+footer div#container form div.controls {
+	padding-top: 1em;
+}
+footer div#container form div.controls button {
+	padding: 0.5em 1em;
+	font-size: 1em;
+	border-radius: 5px;
+}
+
+/*Copyright*/
+
+footer div.copyright.light {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	right: 0;
+	background-color: black;
+	color: white;
+	text-align: center;
+	background-position: calc(~'(50% - 100px)') center;
+}
+
+footer div.copyright.light a {
+	color: white;
+	text-decoration: none;
+}

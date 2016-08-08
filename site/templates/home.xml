@@ -5,7 +5,7 @@
 	<html lang="$language" dir="$language_rtl ? 'rtl' : 'ltr'" cms:eval="lang,dir">
 		<head>
 			<title><cms:text constant="site_title"/></title>	
-			<cms:collection  include="animation_chain"/>
+			<cms:collection  include="page_control,animation_chain"/>
 			<cms:module name="head_tag" action="print_tag"/>
 		</head>
 		<body>
@@ -15,44 +15,86 @@
 				</div>
 				<h1><cms:text constant="header_title" /></h1>
 				<p><cms:text constant="header_p" /></p>
-				<img 
-					src="_BASEURL.'/site/images/album-mockup.png'"
-					alt="ibi"
-					cms:eval="src"
-				/>
-				<a href="#"><cms:text constant="order"/></a>
-				<article>
-					<cms:module 
-						name="articles"
-						action="show"
-						text_id="header_article"
-						template="parts/article.xml"
-					/>
-				</article>
+				<cms:desktop>
+					<div id="album">
+						<img 
+							src="_BASEURL.'/site/images/album-mockup.png'"
+							alt="ibi"
+							cms:eval="src"
+						/>
+						<a href="#"><cms:text constant="order"/></a>
+						<article>
+							<cms:module 
+								name="articles"
+								action="show"
+								text_id="header_article"
+								template="parts/article.xml"
+							/>
+						</article>
+					</div>
+				</cms:desktop>
 			</header>
-			<section id="gallery">
-				<ul>
-					<cms:module 
-						name="gallery"
-						action="show_image_list"
-						group="gallery"
-						template="parts/gallery.xml"
+			<cms:mobile>
+				<section id="album">
+					<img 
+						src="_BASEURL.'/site/images/album-mockup.png'"
+						alt="ibi"
+						cms:eval="src"
 					/>
-				</ul>
-			</section>
+					<a href="#" class="button-style"><cms:text constant="order" /></a>
+					<article>
+						<cms:module 
+							name="articles"
+							action="show"
+							text_id="header_article"
+							template="parts/article.xml"
+						/>
+					</article>
+				</section>
+			</cms:mobile>
+			<cms:desktop>
+				<section id="gallery">
+					<ul>
+						<cms:module 
+							name="gallery"
+							action="show_image_list"
+							group="gallery"
+							template="parts/gallery.xml"
+						/>
+					</ul>
+				</section>
+			</cms:desktop>
 			<section id="media">
 				<cms:svg file="site-sprite.svg" symbol="clips"/>
-
 				<h3><cms:text constant="clips"/></h3>
-
-				<ul>
-					<cms:module 
-						name="youtube"
-						action="show_list"
-						group_text_id="clips"
-						template="parts/youtube.xml"
-					/>
-				</ul>
+				<cms:desktop>
+					<ul>
+						<cms:module 
+							name="youtube"
+							action="show_list"
+							group_text_id="clips"
+							template="parts/youtube.xml"
+						/>
+					</ul>
+				</cms:desktop>
+				<cms:mobile>
+					<div class="clips_container">
+						<a href="javascript:void(0)" class="next">
+							<cms:svg file="site-sprite.svg" symbol="arrow"/>
+						</a>
+						<ul>
+							<cms:module 
+								name="youtube"
+								action="show_list"
+								group_text_id="clips"
+								template="parts/youtube.xml"
+							/>
+						</ul>
+						<a href="javascript:void(0)" class="prev">
+							<cms:svg file="site-sprite.svg" symbol="arrow"/>
+						</a>
+					</div>
+				</cms:mobile>
 
 				<cms:svg file="site-sprite.svg" symbol="tv"/>
 
